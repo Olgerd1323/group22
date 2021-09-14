@@ -1,0 +1,172 @@
+{
+	"id": "6f111f80-20dc-4183-8bc9-fe5ea3b24332",
+	"name": "Postman.HW_1",
+	"timestamp": "2021-09-14T10:09:13.519Z",
+	"collection_id": "17107782-8568c85b-499b-487e-a721-f35d6c22a383",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "cf5697a7-5dc6-4cbd-9153-b3137006a215",
+			"name": "EP_1",
+			"url": "http://162.55.220.72:5005/get_method?name=Oleg&age=26",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				99
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cc895fb3-8ba4-4893-9b21-095e6a81dc5a",
+			"name": "EP_2",
+			"url": "http://162.55.220.72:5005/user_info_3",
+			"time": 102,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				102
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6dee585e-8928-405e-9361-5b9ab62979c6",
+			"name": "EP_3",
+			"url": "http://162.55.220.72:5005/object_info_1?name=Oleg&age=26&weight=85",
+			"time": 98,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				98
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7b3cb583-c099-4759-8420-188bfdb83ac3",
+			"name": "EP_4",
+			"url": "http://162.55.220.72:5005/object_info_2?name=Oleg&age=26&salary=500",
+			"time": 94,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				94
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "61d5ef4a-3cb5-47ee-ade5-040749f0d61f",
+			"name": "EP_5",
+			"url": "http://162.55.220.72:5005/object_info_3?name=Oleg&age=26&salary=400",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				91
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "893c2a4b-ebd3-4a7e-8f9b-92c8580cd6da",
+			"name": "EP_6",
+			"url": "http://162.55.220.72:5005/object_info_4?name=Oleg&age=26&salary=350",
+			"time": 97,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				97
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ac1cf036-3ab7-4523-b72f-1eba2b1a4e0e",
+			"name": "EP_7",
+			"url": "http://162.55.220.72:5005/user_info_2",
+			"time": 98,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				98
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 679,
+	"collection": {
+		"requests": [
+			{
+				"id": "cf5697a7-5dc6-4cbd-9153-b3137006a215",
+				"method": "GET"
+			},
+			{
+				"id": "cc895fb3-8ba4-4893-9b21-095e6a81dc5a",
+				"method": "POST"
+			},
+			{
+				"id": "6dee585e-8928-405e-9361-5b9ab62979c6",
+				"method": "GET"
+			},
+			{
+				"id": "7b3cb583-c099-4759-8420-188bfdb83ac3",
+				"method": "GET"
+			},
+			{
+				"id": "61d5ef4a-3cb5-47ee-ade5-040749f0d61f",
+				"method": "GET"
+			},
+			{
+				"id": "893c2a4b-ebd3-4a7e-8f9b-92c8580cd6da",
+				"method": "GET"
+			},
+			{
+				"id": "ac1cf036-3ab7-4523-b72f-1eba2b1a4e0e",
+				"method": "POST"
+			}
+		]
+	}
+}
