@@ -1,0 +1,15 @@
+#!/bin/bash
+cd hometask_1
+pwd
+mkdir -p {foldername1,foldername2,foldername3}
+ls -l
+cd foldername1
+pwd
+touch {filename1.txt,filename2.txt,filename3.txt,filename4.json,filename5.json}
+mkdir -p {foldername4,foldername5,foldername6}
+ls -l
+mv {filename1.txt,filename2.txt} foldername5/
+ls -l
+cd foldername5
+pwd 
+ls -l
