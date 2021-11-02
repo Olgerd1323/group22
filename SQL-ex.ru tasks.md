@@ -1,71 +1,110 @@
 # SQL-ex.ru tasks
 - Task #1
 ```sh
-SELECT model, speed, hd
-FROM PC
-WHERE Price < 500;
+Select model, speed, 
+hd from PC 
+where price <500;
 ```
 - Task #2
 ```sh
-SELECT DISTINCT maker
-FROM Product
-WHERE type = 'Printer';
+Select distinct maker
+from Product 
+where type = 'Printer';
 ```
 - Task #3
 ```sh
-SELECT model, ram, screen
-FROM Laptop
-WHERE price > 1000;
+Select model, ram, screen 
+From Laptop 
+where price > 1000;
 ```
 - Task #4
 ```sh
-SELECT *
-FROM Printer
-WHERE color = 'y';
+select * 
+from Printer 
+where color = 'y';
 ```
 - Task #5
 ```sh
-SELECT model, speed, hd
-FROM PC
-WHERE price < 600 AND cd = '12x' OR price < 600 AND cd = '24x';
+select model, speed, hd 
+from PC 
+where (cd = '12x' or cd = '24x') and price < 600;
 ```
 - Task #6
 ```sh
-SELECT DISTINCT Product.maker, Laptop.speed
-FROM Laptop
-JOIN Product
-ON Product.model = Laptop.model
-WHERE Laptop.hd >= 10;
+select distinct product.maker, laptop.speed
+from product 
+join laptop on product.model = laptop.model
+where hd >= 10
+order by speed;
 ```
 - Task #7
 ```sh
-SELECT model, price 
-FROM PC 
-WHERE model IN (SELECT model 
- FROM Product 
- WHERE maker = 'B' AND 
- type = 'PC')
-UNION
-SELECT model, price 
-FROM Laptop 
-WHERE model IN (SELECT model 
- FROM Product 
- WHERE maker = 'B' AND 
- type = 'Laptop')
-UNION
-SELECT model, price 
-FROM Printer 
-WHERE model IN (SELECT model 
- FROM Product 
- WHERE maker = 'B' AND 
- type = 'Printer');
+Select a.model, price 
+from (select model, price 
+ from PC 
+ union
+ select model, price 
+  from Laptop
+ union
+ select model, price 
+ from Printer) 
+as a join
+ Product p on a.model = p.model
+where p.maker = 'B';
 ```
 - Task #8
 ```sh
-SELECT DISTINCT maker
-FROM Product
-WHERE type in ('PC')
-EXCEPT
-SELECT DISTINCT maker
-FROM Product
-WHERE type in ('Laptop');
+Select distinct maker
+from Product
+where type in ('PC')
+except
+Select distinct maker
+from Product
+where type in ('Laptop');
+```
+- Task #9
+```sh
+Select distinct maker 
+from Product
+join PC on pc.model = product.model
+where speed >= 450;
+```
+- Task #10
+```sh
+Select model, price
+from Printer
+where price = (select max(price) from Printer);
+```
+- Task #11
+```sh
+Select avg(speed) as avg_speed
+from PC;
+```
+- Task #12
+```sh
+Select avg(speed) as avg_speed
+from Laptop
+where price > 1000;
+```
+- Task #13
+```sh
+Select avg(speed) as avg_speed
+from PC
+join Product on product.model = pc.model
+where product.maker = 'A';
+```
+- Task #14
+```sh
+Select classes.class, ships.name, classes.country
+from Ships
+join Classes on classes.class = ships.class
+where numGuns >= 10;
+```
+- Task #15
+```sh
+Select hd
+from PC 
+group by hd
+having count(model) > 1;
+
+
