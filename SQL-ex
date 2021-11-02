@@ -1,4 +1,4 @@
-# SQL-ex.ru tasks
+# My solutions for SQL-ex.ru tasks
 - Task #1
 ```sh
 SELECT model, speed, hd
@@ -210,3 +210,12 @@ WHERE price = ALL (
 SELECT max(price)
 FROM i
 );
+```
+- Task #
+```sh
+
+```
+- Task #
+```sh
+
+```
