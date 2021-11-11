@@ -38,4 +38,4 @@ curl "http://162.55.220.72:5005/object_info_3?name=Vadim&age=32&salary=1000"
 ***
 * Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
 
-[Скрипт, описание и результат](https://github.com/v-las/Homeworks/tree/main/HW_01/myscript)
+[Скрипт, описание и результат](https://github.com/Olgerd1323/QA_Courses_Group22/blob/Terminal/myscript.txt)
