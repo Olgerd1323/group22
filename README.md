@@ -8,9 +8,9 @@
 7. Создать 5 файлов `(3 txt, 2 json)	touch 1_text_file.txt 2_text_file.txt 3_text_file.txt 1_json_file.json 2_json_file.json`
 8. Создать 3 папки			`mkdir foldername1 foldername2 foldername3`
 9. Вывести список содержимого папки	`ls -la`
-10. + Открыть любой txt файл		`vim 1_text_file.txt`
-11. + написать туда что-нибудь.		`[I] Insert text`
-12. + сохранить и выйти.		`[ESC] :wq`
+10. Открыть любой txt файл		`vim 1_text_file.txt`
+11. написать туда что-нибудь.		`[I] Insert text`
+12. сохранить и выйти.		`[ESC] :wq`
 13. Выйти из папки на уровень выше	`cd ..`
 14. переместить любые 2 файла, которые вы создали, в любую другую папку.	`mv -t foldername1 1_json_file.json 1_text_file.txt`
 15. скопировать любые 2 файла, которые вы создали, в любую другую папку.	`cp -t foldername2 2_json_file.json 2_text_file.txt`
