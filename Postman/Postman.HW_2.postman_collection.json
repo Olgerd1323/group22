@@ -446,7 +446,7 @@
 							"//console.log('Math.random =', getrandomInt(x));\r",
 							"console.log('massive.Cur_ID =', massive = jsonData[getrandomInt(x)]);\r",
 							"//console.log('curr_code =', massive.Cur_ID);\r",
-							"pm.environment.set('curr_code', massive.Cur_ID);\r",
+							"pm.environment.set('Cur_ID', massive.Cur_ID);\r",
 							"\r",
 							"pm.test(\"Status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
@@ -480,6 +480,122 @@
 		},
 		{
 			"name": "curr_byn",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"let schema = {\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"Cur_Abbreviation\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"Cur_ID\": {\r",
+							"      \"type\": \"integer\"\r",
+							"    },\r",
+							"    \"Cur_Name\": {\r",
+							"      \"type\": \"string\"\r",
+							"    },\r",
+							"    \"Cur_OfficialRate\": {\r",
+							"      \"type\": \"number\"\r",
+							"    },\r",
+							"    \"Cur_Scale\": {\r",
+							"      \"type\": \"integer\"\r",
+							"    },\r",
+							"    \"Date\": {\r",
+							"      \"type\": \"string\"\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\r",
+							"    \"Cur_Abbreviation\",\r",
+							"    \"Cur_ID\",\r",
+							"    \"Cur_Name\",\r",
+							"    \"Cur_OfficialRate\",\r",
+							"    \"Cur_Scale\",\r",
+							"    \"Date\"\r",
+							"  ]\r",
+							"};\r",
+							"\r",
+							"pm.test('Schema is valid', function () {\r",
+							"    let isValidScheme = tv4.validate(jsonData, schema, true, true);\r",
+							"    pm.expect(isValidScheme).to.be.true;\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "auth_token",
+							"value": "{{token}}",
+							"type": "text"
+						},
+						{
+							"key": "curr_code",
+							"value": "{{curr_code}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}curr_byn",
+					"host": [
+						"{{url}}curr_byn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "curr_byn***",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const JsonData = pm.response.json();\r",
+							"const length_json = JsonData.length;\r",
+							"console.log(length_json);\r",
+							"let cur_arr = [];\r",
+							"for (let i = 0; i < length_json; i++) {\r",
+							"  cur_arr.push(JsonData[i].Cur_ID);\r",
+							"};\r",
+							"console.log(cur_arr);\r",
+							"\r",
+							"for (let j = 0; j < 3; j++) {  \r",
+							"     pm.sendRequest(\"http://162.55.220.72:5005/curr_byn\", function (err, response) { \r",
+							"         console.log(cur_arr[j]);\r",
+							"     });\r",
+							"     if (pm.response.to.have.status(500)) {\r",
+							"         continue;\r",
+							"     } else {\r",
+							"         if (pm.response.to.have.status(200)) {     \r",
+							"             if (pm.response.json().Cur_OfficialRate !== 0) {\r",
+							"                 return pm.response.json();\r",
+							"             };\r",
+							"         };\r",
+							"     };\r",
+							" };\r",
+							"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+							"    console.log(response.json());\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
