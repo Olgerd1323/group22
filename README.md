@@ -1,5 +1,5 @@
 # Homework #1 
-## Terminal Linux
+## Terminal 
 1. Посмотреть где я			`pwd`
 3. Создать папку			`mkdir foldername`
 4. Зайти в папку			`cd foldername`
