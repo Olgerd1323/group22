@@ -1,1 +1,10 @@
-#group 22
+-Testing documentation (Creating checklists, test cases, and bug reports)
+-Postman (Sending requests (GET, POST). Creating environment variables. Passing values to the environment. Checking JSON structure, code status, and the values in response. Writing autotests).
+-SQL (SELECT, DISTINCT, WHERE, COUNT, AVG, SUM, GROUP BY, LIKE, ORDER BY(DESC), UNION, JOIN).
+-DevTools (Viewing code elements, errors, scripts, server requests and responses. Changing user agent, location, adaptive and responsive design, throttling)
+-Android Studio (Building and running app on emulators and real devices)
+-ADB (Installation and removal of the application, viewing and saving logs, screenshots).
+-Charles, Fiddler (Installing a certificate, configuring a proxy server, intercepting and analyzing traffic, modifying traffic)
+-Jmeter (Creating test scenarios and analyzing load testing results)
+-Git, GitHub (Working with local and remote repositories: creating and removing repositories, adding and removing files, creating and removing branches, merging, pushing)
+-Git Bash (pwd, mkdir, cd, touch, cat, ls, vim, mv, cp, find, grep, head, tail, less, date, curl)
