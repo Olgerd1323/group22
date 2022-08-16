@@ -1,18 +1,17 @@
-1.Testing documentation (Creating checklists, test cases, and bug reports).  
+-Testing documentation.  
 
-2.Postman (Sending requests (GET, POST). Creating environment variables. Passing values to the environment. Checking JSON structure, code status, and the values in response. Writing autotests).  
+-Postman.  
 
-3.SQL (SELECT, DISTINCT, WHERE, COUNT, AVG, SUM, GROUP BY, LIKE, ORDER BY(DESC), UNION, JOIN).  
+-SQL.  
 
-4.DevTools (Viewing code elements, errors, scripts, server requests and responses. Changing user agent, location, adaptive and responsive design, throttling).
-5.Android Studio (Building and running app on emulators and real devices).  
+-DevTools.
 
-6.ADB (Installation and removal of the application, viewing and saving logs, screenshots).  
+-Android Studio.  
 
-7.Charles, Fiddler (Installing a certificate, configuring a proxy server, intercepting and analyzing traffic, modifying traffic).  
+-ADB.  
 
-8.Jmeter (Creating test scenarios and analyzing load testing results).  
+-Charles, Fiddler.  
 
-9.Git, GitHub (Working with local and remote repositories: creating and removing repositories, adding and removing files, creating and removing branches, merging, pushing).  
+-Jmeter.  
 
-10.Git Bash (pwd, mkdir, cd, touch, cat, ls, vim, mv, cp, find, grep, head, tail, less, date, curl).  
+-Git Bash.  
